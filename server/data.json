@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "nickname": "Superman",
+    "real_name": "Clark Kent",
+    "origin_description": "He was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction...",
+    "superpowers": [
+      "solar energy absorption and healing factor",
+      "solar flare and heat vision",
+      "solar invulnerability",
+      "flight"
+    ],
+    "catch_phrase": "Look, up in the sky, it's a bird, it's a plane, it's Superman!",
+    "title_images": "image_url_0",
+    "images": ["image_url_1", "image_url_2", "image_url_3"]
+  },
+  {
+    "id": "2",
+    "nickname": "Batman",
+    "real_name": "Bruce Wayne",
+    "origin_description": "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, Bruce Wayne swore vengeance against criminals, an oath tempered by a sense of justice...",
+    "superpowers": [
+      "wealthy",
+      "brilliant deductive skills",
+      "advanced technology and gadgets",
+      "martial arts expertise"
+    ],
+    "catch_phrase": "I'm Batman!",
+    "title_images": "image_url_0",
+    "images": ["image_url_4", "image_url_5"]
+  },
+  {
+    "id": "3",
+    "nickname": "Wonder Woman",
+    "real_name": "Diana Prince",
+    "origin_description": "Diana, princess of the Amazons, trained to be an unconquerable warrior. Raised on a sheltered island paradise, when a pilot crashes on their shores and tells of a massive conflict raging in the outside world, Diana leaves her home, convinced she can stop the threat.",
+    "superpowers": [
+      "superhuman strength",
+      "flight",
+      "invulnerability",
+      "Lasso of Truth",
+      "Bracelets of Submission"
+    ],
+    "catch_phrase": "I will fight for those who cannot fight for themselves.",
+    "title_images": "image_url_0",
+    "images": ["image_url_6", "image_url_7"]
+  },
+  {
+    "id": "4",
+    "nickname": "Spider-Man",
+    "real_name": "Peter Parker",
+    "origin_description": "Peter Parker, a high school student, gained the abilities of a spider after being bitten by a radioactive spider. With his newfound powers, he fights crime as the friendly neighborhood Spider-Man.",
+    "superpowers": [
+      "agility",
+      "web-slinging",
+      "spider-sense",
+      "superhuman strength"
+    ],
+    "catch_phrase": "With great power comes great responsibility.",
+    "title_images": "image_url_0",
+    "images": ["image_url_8", "image_url_9", "image_url_10"]
+  },
+  {
+    "id": "5",
+    "nickname": "Captain America",
+    "real_name": "Steve Rogers",
+    "origin_description": "Steve Rogers, a frail young man, volunteered for a military experiment that transformed him into the super-soldier known as Captain America. He fights for justice and embodies the ideals of courage, loyalty, and patriotism.",
+    "superpowers": [
+      "enhanced strength",
+      "agility",
+      "healing factor",
+      "indestructible shield"
+    ],
+    "catch_phrase": "I can do this all day.",
+    "title_images": "image_url_0",
+    "images": ["image_url_11", "image_url_12"]
+  },
+  {
+    "id": "6",
+    "nickname": "Black Widow",
+    "real_name": "Natasha Romanoff",
+    "origin_description": "Natasha Romanoff, also known as Black Widow, is a highly skilled spy and assassin. She is a former agent of S.H.I.E.L.D. and a member of the Avengers. With her expertise in combat and espionage, she fights against threats to global security.",
+    "superpowers": [
+      "master martial artist",
+      "expert marksman",
+      "stealth",
+      "espionage"
+    ],
+    "catch_phrase": "I'm always picking up after you boys.",
+    "title_images": "image_url_0",
+    "images": ["image_url_13", "image_url_14", "image_url_15"]
+  },
+  {
+    "id": "7",
+    "nickname": "Thor",
+    "real_name": "Thor Odinson",
+    "origin_description": "Thor Odinson, the god of thunder, wields the enchanted hammer Mjolnir. As a member of the Asgardian race, he protects Earth from various threats and is a founding member of the Avengers.",
+    "superpowers": [
+      "superhuman strength",
+      "control over lightning",
+      "immortality",
+      "flight"
+    ],
+    "catch_phrase": "I am Thor, son of Odin!",
+    "title_images": "image_url_0",
+    "images": ["image_url_16", "image_url_17"]
+  },
+  {
+    "id": "8",
+    "nickname": "Hulk",
+    "real_name": "Bruce Banner",
+    "origin_description": "Bruce Banner, a scientist, gained the ability to transform into the Hulk after being exposed to gamma radiation. As the Hulk, he possesses immense strength and becomes a formidable force against evildoers.",
+    "superpowers": [
+      "superhuman strength",
+      "regenerative healing",
+      "unlimited stamina",
+      "leaping ability"
+    ],
+    "catch_phrase": "Hulk smash!",
+    "title_images": "image_url_0",
+    "images": ["image_url_18", "image_url_19"]
+  },
+  {
+    "id": "9",
+    "nickname": "Black Panther",
+    "real_name": "T'Challa",
+    "origin_description": "T'Challa, the king of Wakanda, possesses enhanced abilities and intelligence as a result of consuming the heart-shaped herb. With his Vibranium suit and advanced technology, he protects his nation and fights for justice.",
+    "superpowers": [
+      "enhanced strength",
+      "agility",
+      "superior intellect",
+      "vibranium suit"
+    ],
+    "catch_phrase": "Wakanda forever!",
+    "images": ["image_url_20", "image_url_21", "image_url_22"]
+  },
+  {
+    "id": "10",
+    "nickname": "Doctor Strange",
+    "real_name": "Stephen Strange",
+    "origin_description": "Stephen Strange, a brilliant neurosurgeon, becomes a powerful sorcerer after a career-ending accident. As Doctor Strange, he protects the Earth from mystical threats and safeguards the fabric of reality.",
+    "superpowers": [
+      "mastery of mystic arts",
+      "time manipulation",
+      "interdimensional travel",
+      "reality manipulation"
+    ],
+    "catch_phrase": "I've come to bargain.",
+    "title_images": "image_url_0",
+    "images": ["image_url_23", "image_url_24"]
+  }
+]
