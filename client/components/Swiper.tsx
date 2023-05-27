@@ -1,63 +1,58 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import Carousel from 'react-material-ui-carousel'
-import { IHero } from '@/model';
-
+import Carousel from 'react-material-ui-carousel';
+import { IHero, IImageHero } from '@/model';
+import { useDeleteImageHeroMutation } from '@/store/api/heroApi';
+import { IconButton } from '@mui/material';
+import { Delete } from '@mui/icons-material';
 
 
 interface SwiperProps {
-  hero?: IHero
+  hero?: IHero;
 }
 
-
-
-
 const Swiper: React.FC<SwiperProps> = ({ hero }: SwiperProps) => {
+  const [deleteImageHero, { isLoading: deleteLoading, error: deleteError }] = useDeleteImageHeroMutation();
 
+  const handleDeleteImage = (imageId: string) => {
+    deleteImageHero({ id: imageId });
+  };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 50,
-          pl: 2,
-          bgcolor: 'background.default',
-        }}
-      >
-        <Typography>{hero?.nickname}</Typography>
-      </Paper>
+    <Box sx={{ flexGrow: 1, mt: 3 }}>
       <Carousel>
-        {hero?.images_hero.map((item, index) => (
+        {hero?.images_hero.map((item: IImageHero, index: number) => {
+          const apiPort = process.env.NEXT_PUBLIC_API_PORT || '5000';
+          const imageUrl = `http://localhost:${apiPort}/${item.image}`;
 
-          <Box
-            key={index}
-            component="img"
-            sx={{
-              height: 255,
-              display: 'block',
-              maxWidth: 400,
-              overflow: 'hidden',
-              margin: '0 auto'
-              // width: '100%',
-            }}
-            src={item.image}
-            alt={hero.nickname}
-          />
-        ))}
+          return (
+            <Box key={index}>
+              <Box
+                component="img"
+                sx={{
+                  height: 255,
+                  display: 'block',
+                  maxWidth: 400,
+                  overflow: 'hidden',
+                  margin: '0 auto'
+                  // width: '100%',
+                }}
+                src={imageUrl}
+                alt={hero.nickname}
+              />
+              <IconButton
+                color="error"
+                sx={{ ml: 5 }}
+                onClick={() => handleDeleteImage(item._id)}>
+                <Delete />
+              </IconButton>
+            </Box>
+
+          );
+        })}
       </Carousel>
     </Box>
   );
-}
+};
 
 export default Swiper;

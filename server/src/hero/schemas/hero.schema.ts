@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
-import { Power } from './power.schema';
-import { Image_hero } from './image_hero.schema';
+import { Power } from '../../power/schemas/power.schema';
+import { Image_hero } from '../../imeges_hero/schemas/image_hero.schema';
 
 export type HeroDocument = Hero & Document;
 

@@ -11,7 +11,7 @@ interface heroSliceProps {
 
 const initialState: heroSliceProps = {
   heroes: [],
-  totalPage: 1,
+  totalPage: 2,
 };
 
 const heroSlice = createSlice({
@@ -28,9 +28,8 @@ const heroSlice = createSlice({
   extraReducers(builder) {
     builder
       .addMatcher(heroApi.endpoints.getHeroes.matchFulfilled, (state, { payload }: PayloadAction<IHero[]>) => {
-        console.log(payload)
         state.heroes = payload;
-        state.totalPage = +Math.ceil(payload.length / 5);
+        state.totalPage = +Math.ceil(payload.length / 4);
       })
   },
 });

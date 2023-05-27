@@ -22,8 +22,6 @@ import {
 } from '@nestjs/swagger';
 import { CreateHerokDto } from './dto/create-hero.dto';
 import { HeroService } from './hero.service';
-import { CreateSuperpowersDto } from './dto/create-superpowers.dto';
-import { CreateImeges_heroDto } from './dto/create-imeges_hero.dto';
 import { UpdateHeroDto } from './dto/update-hero.dto';
 
 @Controller('/heros')
@@ -39,6 +37,7 @@ export class HeroController {
   }
 
   @Get('/search')
+  @ApiQuery({ name: 'search', required: true, description: 'User pagination' })
   search(@Query('query') query: string) {
     return this.heroService.search(query);
   }
@@ -81,41 +80,9 @@ export class HeroController {
     return this.heroService.create(dto, picture[0]);
   }
 
-  @Post('/imges')
-  @ApiConsumes('multipart/form-data')
-  @ApiBody({
-    schema: {
-      type: 'object',
-      properties: {
-        picture: {
-          type: 'string',
-          format: 'binary',
-        },
-        heroId: {
-          type: 'string',
-        },
-      },
-    },
-  })
-  @UseInterceptors(FileFieldsInterceptor([{ name: 'picture', maxCount: 1 }]))
-  addImg(@UploadedFiles() files, @Body() dto: CreateImeges_heroDto) {
-    const { picture } = files;
-    return this.heroService.addImg(dto, picture[0]);
-  }
-
-  @Post('/power')
-  addPower(@Body() dto: CreateSuperpowersDto) {
-    return this.heroService.addPower(dto);
-  }
-
-  @Delete(':id')
-  @ApiParam({ name: 'id', required: true, description: 'Simple' })
-  delete(@Param('id') id: ObjectId) {
-    return this.heroService.delete(id);
-  }
-
   @Put(':id')
   @ApiConsumes('multipart/form-data')
+  @ApiParam({ name: 'id', required: true, description: 'Simple' })
   @ApiBody({
     schema: {
       type: 'object',
@@ -139,11 +106,19 @@ export class HeroController {
       },
     },
   })
-  @ApiParam({ name: 'id', required: true, description: 'Simple' })
+  @UseInterceptors(FileFieldsInterceptor([{ name: 'picture', maxCount: 1 }]))
   async updateHero(
+    @UploadedFiles() files,
     @Param('id') id: string,
     @Body() updateHeroDto: UpdateHeroDto,
   ) {
-    return this.heroService.updateHero(id, updateHeroDto);
+    const { picture } = files;
+    return this.heroService.updateHero(id, updateHeroDto, picture[0]);
+  }
+
+  @Delete(':id')
+  @ApiParam({ name: 'id', required: true, description: 'Simple' })
+  delete(@Param('id') id: ObjectId) {
+    return this.heroService.delete(id);
   }
 }

@@ -2,10 +2,13 @@ import { Module } from '@nestjs/common';
 import { HeroController } from './hero.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Hero, HeroSchema } from './schemas/hero.schema';
-import { Power, PowerSchema } from './schemas/power.schema';
+import { Power, PowerSchema } from '../power/schemas/power.schema';
 import { FileService } from '../file/file.service';
 import { HeroService } from './hero.service';
-import { Image_hero, Image_heroSchema } from './schemas/image_hero.schema';
+import {
+  Image_hero,
+  Image_heroSchema,
+} from '../imeges_hero/schemas/image_hero.schema';
 
 @Module({
   imports: [

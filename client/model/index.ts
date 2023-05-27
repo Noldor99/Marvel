@@ -21,17 +21,17 @@ export interface IImageHero {
   image_hero: IHero;
 }
 
-export interface ICreateHerok {
+export interface ICreateHero {
   nickname: string;
   real_name: string;
   origin_description: string;
   catch_phrase: string;
-  title_images: string;
+  picture?: File;
 }
 
 export interface ICreateImegesHero {
-  image: string;
   heroId: string;
+  picture: File;
 }
 
 export interface ICreateSuperpowers {

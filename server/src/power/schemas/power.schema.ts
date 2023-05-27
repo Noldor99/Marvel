@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Hero } from './hero.schema';
+import { Hero } from '../../hero/schemas/hero.schema';
 import * as mongoose from 'mongoose';
 
 export type PowerDocument = Power & Document;

@@ -4,6 +4,8 @@ import { FileModule } from './file/file.module';
 import * as path from 'path';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { HeroModule } from './hero/hero.module';
+import { PowerModule } from './power/power.module';
+import { ImegesHeroModule } from './imeges_hero/imeges_hero.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { HeroModule } from './hero/hero.module';
     ),
     HeroModule,
     FileModule,
+    PowerModule,
+    ImegesHeroModule,
   ],
 })
 export class AppModule {}
